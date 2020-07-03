@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-
+import { ElementsModule } from './elements/elements.module';
 
 @NgModule({
   declarations: [
@@ -12,8 +12,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
     NotFoundComponent,
   ],
   imports: [
+    ElementsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
