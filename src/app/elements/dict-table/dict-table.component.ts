@@ -1,7 +1,8 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
+import { Observable } from 'rxjs';
 import { DictTableDataSource, DictTableItem } from './dict-table-datasource';
 
 @Component({
@@ -10,6 +11,9 @@ import { DictTableDataSource, DictTableItem } from './dict-table-datasource';
   styleUrls: ['./dict-table.component.css']
 })
 export class DictTableComponent implements AfterViewInit, OnInit {
+  @Input() data$: Observable<DictTableItem[]>;
+
+
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatTable) table: MatTable<DictTableItem>;
@@ -18,11 +22,16 @@ export class DictTableComponent implements AfterViewInit, OnInit {
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns = ['id', 'name'];
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.dataSource = new DictTableDataSource();
+
+    this.data$.subscribe( data => {
+      this.dataSource.data = data;
+      console.log(data);
+    });
   }
 
-  ngAfterViewInit() {
+  ngAfterViewInit(): void {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
     this.table.dataSource = this.dataSource;
