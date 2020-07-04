@@ -12,14 +12,17 @@ import { MatMenuModule } from '@angular/material/menu'
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { MatCardModule } from '@angular/material/card';
 
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { DictTableComponent } from './dict-table/dict-table.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
     NavMenuComponent,
     DictTableComponent,
+    CardComponent,
   ],
   imports: [
     CommonModule,
@@ -34,10 +37,12 @@ import { DictTableComponent } from './dict-table/dict-table.component';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    MatCardModule,
   ], 
   exports: [
     NavMenuComponent,
     DictTableComponent,
+    CardComponent,
   ]
 })
 export class ElementsModule { }

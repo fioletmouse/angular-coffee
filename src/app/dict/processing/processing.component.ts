@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProcessingComponent implements OnInit {
 
+  title = 'Beans Processing';
+
   constructor() { }
 
   ngOnInit(): void {

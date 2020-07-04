@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CountryComponent implements OnInit {
 
+  title = 'Countries List';
+
   constructor() { }
 
   ngOnInit(): void {

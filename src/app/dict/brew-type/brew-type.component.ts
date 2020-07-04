@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BrewTypeComponent implements OnInit {
 
+  title = 'Methods for Brewing Coffee';
+
   constructor() { }
 
   ngOnInit(): void {
