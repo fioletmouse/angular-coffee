@@ -1,28 +1,30 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
-
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule } from '@angular/material/toolbar';
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { MatMenuModule } from '@angular/material/menu'
-import { MatTableModule } from '@angular/material/table';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSortModule } from '@angular/material/sort';
-import { MatCardModule } from '@angular/material/card';
-
-import { NavMenuComponent } from './nav-menu/nav-menu.component';
-import { DictTableComponent } from './dict-table/dict-table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { RouterModule } from '@angular/router';
 import { CardComponent } from './card/card.component';
+import { DictTableComponent } from './dict-table/dict-table.component';
+import { MainListComponent } from './main-list/main-list.component';
+import { NavMenuComponent } from './nav-menu/nav-menu.component';
+
+
 
 @NgModule({
   declarations: [
     NavMenuComponent,
     DictTableComponent,
     CardComponent,
+    MainListComponent,
   ],
   imports: [
     CommonModule,
@@ -38,11 +40,12 @@ import { CardComponent } from './card/card.component';
     MatPaginatorModule,
     MatSortModule,
     MatCardModule,
-  ], 
+  ],
   exports: [
     NavMenuComponent,
     DictTableComponent,
     CardComponent,
+    MainListComponent,
   ]
 })
 export class ElementsModule { }
