@@ -3,7 +3,8 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
 import { Observable } from 'rxjs';
-import { DictTableDataSource, DictTableItem } from './dict-table-datasource';
+import { DictTableItem } from '../../shared/dictionary.model';
+import { DictTableDataSource } from './dict-table-datasource';
 
 @Component({
   selector: 'el-dict-table',
@@ -20,14 +21,13 @@ export class DictTableComponent implements AfterViewInit, OnInit {
   dataSource: DictTableDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'name'];
+  displayedColumns = ['id', 'name', 'isActive'];
 
   ngOnInit(): void {
     this.dataSource = new DictTableDataSource();
 
     this.data$.subscribe( data => {
       this.dataSource.data = data;
-      console.log(data);
     });
   }
 

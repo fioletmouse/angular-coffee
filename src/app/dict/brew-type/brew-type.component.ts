@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { DictTableItem } from 'src/app/elements/dict-table/dict-table-datasource';
-import { BrewTypeService } from './../../services/brew-type.service';
+import { DictTableItem } from '../../shared/dictionary.model';
+import { BrewTypeService } from './brew-type.service';
 
 @Component({
   selector: 'app-brew-type',
   templateUrl: './brew-type.component.html',
-  styleUrls: ['./brew-type.component.css']
+  styleUrls: ['./brew-type.component.css'],
+  providers: [BrewTypeService]
 })
 export class BrewTypeComponent implements OnInit {
   title = 'Methods for Brewing Coffee';

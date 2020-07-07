@@ -1,18 +1,16 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { DictTableItem } from '../elements/dict-table/dict-table-datasource';
+import { DictTableItem } from '../../shared/dictionary.model';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class BrewTypeService {
 
   constructor() { }
 
   getBrewType(): Observable<DictTableItem[]> {
     return of([
-      { id: 1, name: '1'},
-      { id: 2, name: '2'}
+      { id: 1, name: 'b1', isActive: true},
+      { id: 2, name: 'b2', isActive: false}
     ]);
   }
 }
