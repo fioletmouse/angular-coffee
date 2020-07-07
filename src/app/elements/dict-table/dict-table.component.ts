@@ -36,4 +36,8 @@ export class DictTableComponent implements AfterViewInit, OnInit {
     this.dataSource.paginator = this.paginator;
     this.table.dataSource = this.dataSource;
   }
+
+  clickRecord(row) {
+    console.log(row);
+  }
 }
