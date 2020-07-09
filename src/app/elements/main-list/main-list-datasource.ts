@@ -6,8 +6,11 @@ import { map } from 'rxjs/operators';
 
 // TODO: Replace this with your own data model type
 export interface MainListItem {
-  name: string;
   id: number;
+  name: string;
+  country: string;
+  processing: string;
+  taste: string;
 }
 
 /**

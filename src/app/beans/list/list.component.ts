@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { MainListItem } from '../../elements/main-list/main-list-datasource';
+import { BeansService } from './../../services/beans.service';
 
 @Component({
   selector: 'app-list',
@@ -8,9 +11,12 @@ import { Component, OnInit } from '@angular/core';
 export class ListComponent implements OnInit {
 
   title = 'Coffee beans';
-  constructor() { }
+  data$: Observable<MainListItem[]>;
+
+  constructor(private beansService: BeansService) { }
 
   ngOnInit(): void {
+    this.data$ = this.beansService.getList();
   }
 
 }
