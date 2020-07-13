@@ -12,9 +12,11 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterModule } from '@angular/router';
+import { AgGridModule } from 'ag-grid-angular';
 import { CardComponent } from './card/card.component';
 import { DictTableComponent } from './dict-table/dict-table.component';
 import { MainListComponent } from './main-list/main-list.component';
+import { MainTableComponent } from './main-table/main-table.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 
 
@@ -25,6 +27,7 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
     DictTableComponent,
     CardComponent,
     MainListComponent,
+    MainTableComponent,
   ],
   imports: [
     CommonModule,
@@ -40,12 +43,14 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
     MatPaginatorModule,
     MatSortModule,
     MatCardModule,
+    AgGridModule.withComponents(),
   ],
   exports: [
     NavMenuComponent,
     DictTableComponent,
     CardComponent,
     MainListComponent,
+    MainTableComponent,
   ]
 })
 export class ElementsModule { }
