@@ -12,28 +12,27 @@ export class TablesSettingsService {
         headerName: 'Id',
         field: 'id',
         sortable: true,
-        minWidth: 50, },
-      {
-        headerName: 'Name',
-        field: 'name',
-        sortable: true,
-        flex: 1,
-        minWidth: 100, },
+        minWidth: 50,
+        maxWidth: 80, },
       {
         headerName: 'Active',
         field: 'isActive',
         sortable: true,
-        flex: 1,
-        minWidth: 50,
+        sort: 'desc',
+        minWidth: 80,
+        maxWidth: 100,
         valueFormatter: (params) => {
           return params.value === true ? 'Yes' : 'No';
         },
-      }
+      }, {
+        headerName: 'Name',
+        field: 'name',
+        sortable: true,
+        flex: 1,
+        minWidth: 100, }
     ],
     rowSelection: 'single',
-    suppressRowClickSelection: true,
     onRowClicked: () => {},
-    onRowSelected: () => {},
     rowData: [],
   };
 

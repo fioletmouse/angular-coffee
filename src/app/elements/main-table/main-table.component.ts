@@ -13,20 +13,39 @@ export class MainTableComponent implements OnInit, OnDestroy {
 
   @Input() data$: Observable<DictTableItem[]>;
   @Input() gripOptions: GridOptions;
+  @Input() clickedRow$: Observable<DictTableItem>;
 
   dataSubscription: Subscription = null;
+  clickedRowSubscription: Subscription = null;
 
   agGrid: AgGridAngular = null;
   defaultColumnDef = {
     resizable: true,
   };
+  smallSize = false;
 
   constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit() {
+    if (this.clickedRow$ != null) {
+      this.clickedRowSubscription = this.clickedRow$
+        .subscribe({
+          next: (row) => {
+            if (row === null) {
+              this.smallSize = false;
+            } else {
+              this.smallSize = true;
+            }
 
-  ngOnDestroy(): void {
+          },
+          error: err => console.error(err),
+        });
+    }
+  }
+
+  ngOnDestroy() {
     this.dataSubscription.unsubscribe();
+    this.clickedRowSubscription.unsubscribe();
   }
 
   onGridReady(e: AgGridAngular) {

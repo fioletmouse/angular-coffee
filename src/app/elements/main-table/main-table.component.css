@@ -2,7 +2,21 @@
     height: 100%;
 }
 ag-grid-angular {
-    min-height: 150px;
-    width: 100%;
+    min-height: 150px; 
     height: calc(100% - 50px);
+}
+.selected {
+    width: 50%;
+}
+.not-selected {
+    width: 100%;
+}
+
+.tableRowDrawer
+{  
+    position: sticky;
+    min-height: 28.75rem;
+    width: 50%;
+    left: 50%;
+    bottom: 68px;
 }
