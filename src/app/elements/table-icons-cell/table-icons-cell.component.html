@@ -1,0 +1,6 @@
+<div class="container">
+	<a *ngFor="let btn of buttons"
+	    role="button" class="btn" (click)="onClick($event, btn.handler)">
+        <mat-icon aria-hidden="false">{{btn.icon}}</mat-icon>
+	</a>
+</div>

@@ -13,12 +13,14 @@ import { AgGridModule } from 'ag-grid-angular';
 import { CardComponent } from './card/card.component';
 import { MainTableComponent } from './main-table/main-table.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import { TableIconsCellComponent } from './table-icons-cell/table-icons-cell.component';
 
 @NgModule({
   declarations: [
     NavMenuComponent,
     CardComponent,
     MainTableComponent,
+    TableIconsCellComponent,
   ],
   imports: [
     CommonModule,

@@ -67,7 +67,7 @@ export class TablesSettingsService {
         field: 'taste',
         sortable: true,
         flex: 1,
-        minWidth: 50, }
+        minWidth: 50, },
     ],
     rowSelection: 'single',
     suppressRowClickSelection: true,
