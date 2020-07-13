@@ -4,7 +4,7 @@
             <el-main-table [data$]="data$" [gripOptions]="gridOptions" 
             [clickedRow$]="chosenRow$">
             <div slidePanel>
-                <app-dict-edit></app-dict-edit>
+                <app-dict-edit [clickedRow$]="chosenRow$" (save)="onSave($event)"></app-dict-edit>
             </div>
         
         </el-main-table>

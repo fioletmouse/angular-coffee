@@ -39,4 +39,8 @@ export class BrewTypeComponent implements OnInit {
     this.chosenRow$.next(event.data);
   }
 
+  onSave($event) {
+    console.log($event);
+    this.brewService.saveOrUpdate($event);
+  }
 }

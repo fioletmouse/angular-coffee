@@ -3,7 +3,10 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -11,6 +14,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterModule } from '@angular/router';
 import { AgGridModule } from 'ag-grid-angular';
 import { CardComponent } from './card/card.component';
+import { CheckboxComponent } from './checkbox/checkbox.component';
+import { InputComponent } from './input/input.component';
 import { MainTableComponent } from './main-table/main-table.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { TableIconsCellComponent } from './table-icons-cell/table-icons-cell.component';
@@ -21,6 +26,8 @@ import { TableIconsCellComponent } from './table-icons-cell/table-icons-cell.com
     CardComponent,
     MainTableComponent,
     TableIconsCellComponent,
+    InputComponent,
+    CheckboxComponent,
   ],
   imports: [
     CommonModule,
@@ -34,11 +41,16 @@ import { TableIconsCellComponent } from './table-icons-cell/table-icons-cell.com
     MatMenuModule,
     MatCardModule,
     AgGridModule.withComponents(),
+    MatFormFieldModule,
+    MatInputModule,
+    MatCheckboxModule,
   ],
   exports: [
     NavMenuComponent,
     CardComponent,
     MainTableComponent,
+    InputComponent,
+    CheckboxComponent,
   ]
 })
 export class ElementsModule { }

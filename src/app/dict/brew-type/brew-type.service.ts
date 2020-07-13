@@ -13,4 +13,8 @@ export class BrewTypeService {
       { id: 2, name: 'b2', isActive: false}
     ]);
   }
+
+  saveOrUpdate(data: DictTableItem) {
+    console.log(data);
+  }
 }

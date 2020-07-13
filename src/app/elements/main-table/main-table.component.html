@@ -3,6 +3,7 @@
     [gridOptions]="gripOptions" [defaultColDef]="defaultColumnDef"
     (gridReady)="onGridReady($event)">
 </ag-grid-angular>
+
 <div class="tableRowDrawer" *ngIf="smallSize">
     <ng-content select="[slidePanel]"></ng-content>
 </div>
