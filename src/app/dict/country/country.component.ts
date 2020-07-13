@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { GridOptions } from 'ag-grid-community';
 import { Observable } from 'rxjs';
+import { TablesSettingsService } from '../../services/tables-settings.service';
 import { DictTableItem } from '../../shared/models/dictionary.model';
-import { DictService } from './../../services/dict.service';
 import { CountryService } from './country.service';
 
 @Component({
@@ -19,7 +19,7 @@ export class CountryComponent implements OnInit {
 
   constructor(
     private countryService: CountryService,
-    private dictService: DictService
+    private dictService: TablesSettingsService
     ) { }
 
   ngOnInit(): void {

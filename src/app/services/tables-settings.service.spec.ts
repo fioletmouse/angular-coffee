@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
+import { TablesSettingsService } from './tables-settings.service';
 
-import { DictService } from './dict.service';
 
 describe('DictService', () => {
-  let service: DictService;
+  let service: TablesSettingsService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(DictService);
+    service = TestBed.inject(TablesSettingsService);
   });
 
   it('should be created', () => {

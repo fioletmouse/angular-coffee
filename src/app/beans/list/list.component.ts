@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GridOptions } from 'ag-grid-community';
 import { Observable } from 'rxjs';
+import { TablesSettingsService } from 'src/app/services/tables-settings.service';
 import { MainListItem } from '../../shared/models/list.model';
 import { BeansService } from './../../services/beans.service';
 
@@ -14,27 +15,15 @@ export class ListComponent implements OnInit {
   title = 'Coffee beans';
   data$: Observable<MainListItem[]>;
   gridOptions: GridOptions;
-  constructor(private beansService: BeansService) { }
+
+  constructor(
+    private beansService: BeansService,
+    private dictService: TablesSettingsService
+    ) { }
 
   ngOnInit(): void {
     this.data$ = this.beansService.getList();
-
-    this.gridOptions =  {
-      columnDefs: [
-         {
-          headerName: 'test',
-          field: 'deliveryNo',
-          sortable: true,
-          minWidth: 50,
-          maxWidth: 200, }
-      ],
-      rowSelection: 'multiple',
-      rowMultiSelectWithClick: false,
-      suppressRowClickSelection: true,
-      onRowClicked: () => {},
-      onRowSelected: () => {},
-      rowData: [],
-    };
+    this.gridOptions =  this.dictService.mainListGridOptions;
   }
 
 }
