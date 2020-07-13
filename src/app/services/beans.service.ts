@@ -19,4 +19,15 @@ export class BeansService {
     };
     return of([tt]);
   }
+
+  getDetailById(id: number) {
+    const tt: MainListItem = {
+      id: 1,
+      name: 'string',
+      country: 'string',
+      processing: 'string',
+      taste: 'string',
+    };
+    return of(tt);
+  }
 }

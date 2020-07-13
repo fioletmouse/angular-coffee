@@ -12,6 +12,6 @@ export class DetailResolver implements Resolve<any> {
   ) { }
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-    this.beansService.getList();
+    return this.beansService.getDetailById(route.params?.id);
   }
 }
