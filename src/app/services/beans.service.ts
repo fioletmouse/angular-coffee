@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { MainListItem } from '../elements/main-list/main-list-datasource';
+import { MainListItem } from '../shared/models/list.model';
 
 @Injectable({
   providedIn: 'root'

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { DictTableItem } from '../../shared/dictionary.model';
+import { DictTableItem } from '../../shared/models/dictionary.model';
 
 @Injectable()
 export class ProcessingService {

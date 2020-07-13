@@ -1,0 +1,8 @@
+:host {
+    height: 100%;
+}
+ag-grid-angular {
+    min-height: 150px;
+    width: 100%;
+    height: calc(100% - 50px);
+}
