@@ -7,7 +7,6 @@ import { ElementsModule } from './elements/elements.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +17,6 @@ import { NotFoundComponent } from './not-found/not-found.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     ElementsModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent]

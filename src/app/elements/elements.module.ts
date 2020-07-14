@@ -13,6 +13,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterModule } from '@angular/router';
 import { AgGridModule } from 'ag-grid-angular';
+import { SharedModule } from '../shared/shared.module';
+import { ButtonComponent } from './button/button.component';
 import { CardComponent } from './card/card.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { InputComponent } from './input/input.component';
@@ -28,6 +30,7 @@ import { TableIconsCellComponent } from './table-icons-cell/table-icons-cell.com
     TableIconsCellComponent,
     InputComponent,
     CheckboxComponent,
+    ButtonComponent,
   ],
   imports: [
     CommonModule,
@@ -44,6 +47,7 @@ import { TableIconsCellComponent } from './table-icons-cell/table-icons-cell.com
     MatFormFieldModule,
     MatInputModule,
     MatCheckboxModule,
+    SharedModule
   ],
   exports: [
     NavMenuComponent,
@@ -51,6 +55,7 @@ import { TableIconsCellComponent } from './table-icons-cell/table-icons-cell.com
     MainTableComponent,
     InputComponent,
     CheckboxComponent,
+    ButtonComponent,
   ]
 })
 export class ElementsModule { }

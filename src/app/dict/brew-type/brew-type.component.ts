@@ -43,4 +43,9 @@ export class BrewTypeComponent implements OnInit {
     console.log($event);
     this.brewService.saveOrUpdate($event);
   }
+
+  onCancel($event) {
+    console.log('cancel' + $event);
+    // this.brewService.saveOrUpdate($event);
+  }
 }
