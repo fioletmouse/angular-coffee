@@ -13,4 +13,8 @@ export class CountryService {
       { id: 2, name: 'c2', isActive: true}
     ]);
   }
+
+  saveOrUpdate(data: DictTableItem) {
+    console.log(data);
+  }
 }

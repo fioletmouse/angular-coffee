@@ -6,7 +6,6 @@ import { BrewTypeService } from './brew-type.service';
 @Component({
   selector: 'app-brew-type',
   templateUrl: './brew-type.component.html',
-  styleUrls: ['./brew-type.component.css'],
   providers: [BrewTypeService]
 })
 export class BrewTypeComponent implements OnInit {

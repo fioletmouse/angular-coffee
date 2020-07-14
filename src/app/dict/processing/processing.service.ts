@@ -13,4 +13,7 @@ export class ProcessingService {
       { id: 2, name: 'p2', isActive: false}
     ]);
   }
+  saveOrUpdate(data: DictTableItem) {
+    console.log(data);
+  }
 }
