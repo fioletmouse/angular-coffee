@@ -14,6 +14,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterModule } from '@angular/router';
 import { AgGridModule } from 'ag-grid-angular';
 import { SharedModule } from '../shared/shared.module';
+import { ButtonIconComponent } from './button-icon/button-icon.component';
 import { ButtonComponent } from './button/button.component';
 import { CardComponent } from './card/card.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
@@ -31,6 +32,7 @@ import { TableIconsCellComponent } from './table-icons-cell/table-icons-cell.com
     InputComponent,
     CheckboxComponent,
     ButtonComponent,
+    ButtonIconComponent,
   ],
   imports: [
     CommonModule,
@@ -56,6 +58,7 @@ import { TableIconsCellComponent } from './table-icons-cell/table-icons-cell.com
     InputComponent,
     CheckboxComponent,
     ButtonComponent,
+    ButtonIconComponent,
   ]
 })
 export class ElementsModule { }
