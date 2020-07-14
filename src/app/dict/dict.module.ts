@@ -7,13 +7,15 @@ import { CountryComponent } from './country/country.component';
 import { DictEditComponent } from './dict-edit/dict-edit.component';
 import { DictRoutingModule } from './dict-routing.module';
 import { ProcessingComponent } from './processing/processing.component';
+import { DictListComponent } from './dict-list/dict-list.component';
 
 @NgModule({
   declarations: [
     BrewTypeComponent,
     ProcessingComponent,
     CountryComponent,
-    DictEditComponent
+    DictEditComponent,
+    DictListComponent
   ],
   imports: [
     CommonModule,

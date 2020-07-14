@@ -6,7 +6,7 @@ ag-grid-angular {
     height: calc(100% - 50px);
 }
 .selected {
-    width: 70%;
+    width: 69%;
 }
 .not-selected {
     width: 100%;

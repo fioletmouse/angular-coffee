@@ -45,7 +45,9 @@ export class MainTableComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.dataSubscription.unsubscribe();
-    this.clickedRowSubscription.unsubscribe();
+    if (this.clickedRowSubscription) {
+      this.clickedRowSubscription.unsubscribe();
+    }
   }
 
   onGridReady(e: AgGridAngular) {
