@@ -53,6 +53,10 @@ export class DictEditComponent implements OnInit, OnDestroy {
   }
 
   onSave() {
+    if (this.addEditForm.invalid) {
+      this.addEditForm.markAllAsTouched();
+      return;
+    }
     this.save.emit(this.addEditForm.value);
   }
 

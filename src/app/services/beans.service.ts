@@ -10,22 +10,28 @@ export class BeansService {
   constructor() { }
 
   getList(): Observable<MainListItem[] > {
-    const tt: MainListItem = {
+    const tt: MainListItem[] = [{
       id: 1,
-      name: 'string',
-      country: 'string',
-      processing: 'string',
+      name: 'Периконго',
+      country: 'Колумбия',
+      processing: 'Мытая',
       taste: 'string',
-    };
-    return of([tt]);
+    }, {
+      id: 2,
+      name: 'Финка Лас-Брикас',
+      country: 'Сальвадор',
+      processing: 'Сухая',
+      taste: 'string',
+    }];
+    return of(tt);
   }
 
   getDetailById(id: number) {
     const tt: MainListItem = {
       id: 1,
-      name: 'string',
-      country: 'string',
-      processing: 'string',
+      name: 'Периконго',
+      country: 'Колумбия',
+      processing: 'Мытая',
       taste: 'string',
     };
     return of(tt);

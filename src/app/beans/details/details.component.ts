@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { MainListItem } from 'src/app/shared/models/list.model';
 
 @Component({
   selector: 'app-details',
@@ -8,12 +9,15 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetailsComponent implements OnInit {
 
+  details: MainListItem = null;
   constructor(
     private route: ActivatedRoute
     ) { }
 
   ngOnInit(): void {
-    console.log(this.route.snapshot.data.info);
+    this.details = this.route.snapshot.data.info;
   }
-
+  get getFullName() {
+    return `${this.details.country} ${ this.details.name}`;
+  }
 }

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'el-button-icon',
@@ -6,15 +6,17 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./button-icon.component.css']
 })
 export class ButtonIconComponent implements OnInit {
-  @Output() addHandler = new EventEmitter();
+  @Input() color = 'primary';
+  @Input() type = 'menu';
+  @Output() buttonHandler = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  add() {
-    this.addHandler.emit();
+  handler() {
+    this.buttonHandler.emit();
   }
 
 }

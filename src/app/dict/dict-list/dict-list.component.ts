@@ -47,7 +47,12 @@ export class DictListComponent implements OnInit {
   }
 
   addClick() {
-    const addRow: DictTableItem = { id: 0, name: '', isActive: true};
-    this.chosenRow$.next(addRow);
+    const currentValue = this.chosenRow$.getValue();
+    if (currentValue == null) {
+      const addRow: DictTableItem = { id: 0, name: '', isActive: true};
+      this.chosenRow$.next(addRow);
+    } else {
+      this.chosenRow$.next(null);
+    }
   }
 }
