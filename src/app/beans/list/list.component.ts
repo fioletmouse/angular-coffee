@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { GridOptions } from 'ag-grid-community';
 import { Observable } from 'rxjs';
 import { TablesSettingsService } from 'src/app/services/tables-settings.service';
-import { MainListItem } from '../../shared/models/list.model';
+import { MainListItem } from '../../shared/models/beans.model';
 import { TableIconsCellComponent } from './../../elements/table-icons-cell/table-icons-cell.component';
 import { BeansService } from './../../services/beans.service';
 

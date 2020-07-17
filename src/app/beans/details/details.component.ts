@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { MainListItem } from 'src/app/shared/models/list.model';
+import { BeansDetail } from 'src/app/shared/models/beans.model';
 
 @Component({
   selector: 'app-details',
@@ -9,7 +9,7 @@ import { MainListItem } from 'src/app/shared/models/list.model';
 })
 export class DetailsComponent implements OnInit {
 
-  details: MainListItem = null;
+  details: BeansDetail = null;
   constructor(
     private route: ActivatedRoute
     ) { }
