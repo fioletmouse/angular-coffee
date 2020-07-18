@@ -38,6 +38,7 @@ export class BeansService {
       description: 'test',
       minAltitude: 1600,
       maxAltitude: null,
+      brew: ['Кемерс', 'Аэропресс'],
       roastDate: '12/11/2020',
       taste: 'string',
     };

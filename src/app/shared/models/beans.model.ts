@@ -12,6 +12,7 @@ export interface BeansDetail {
   name: string;
   country: string;
   processing: string;
+  brew: string[];
   type: string;
   region: string;
   area: string;

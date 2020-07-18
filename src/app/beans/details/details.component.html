@@ -2,7 +2,23 @@
 <div class="row">
     <div class="col-12">
         <el-card [title]="getFullName">    
-            <p>details works!</p>
+            <div class="row">
+                <div class="col-4">{{details.type}}</div>
+                <div class="col-4">{{details.region}}<br/>{{details.area}}</div>
+                <div class="col-4">
+                    {{details.minAltitude}} 
+                    {{details.maxAltitude != null ? ' - ' + details.maxAltitude : '' }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">{{details.brew}}</div>
+                <div class="col-3">{{details.processing}}</div>
+                <div class="col-3">{{details.taste}}</div>
+                <div class="col-3">{{details.roastDate}}</div>
+            </div>
+            <div class="row">
+                <div class="col-12">{{details.description}}</div>                
+            </div>
         </el-card>       
     </div>
 </div>
