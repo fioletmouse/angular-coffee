@@ -14,14 +14,20 @@ export class BeansService {
       id: 1,
       name: 'Периконго',
       country: 'Колумбия',
+      processing_id: 1,
       processing: 'Мытая',
-      taste: 'string',
+      taste: {
+        sweet: 40,
+        acid: 50,
+        bitter: 70,
+      },
     }, {
       id: 2,
       name: 'Финка Лас-Брикас',
       country: 'Сальвадор',
+      processing_id: 2,
       processing: 'Сухая',
-      taste: 'string',
+      taste: null,
     }];
     return of(tt);
   }
@@ -40,7 +46,11 @@ export class BeansService {
       maxAltitude: null,
       brew: ['Кемерс', 'Аэропресс'],
       roastDate: '12/11/2020',
-      taste: 'string',
+      taste: {
+        sweet: 40,
+        acid: 50,
+        bitter: 70,
+      },
     };
     return of(tt);
   }

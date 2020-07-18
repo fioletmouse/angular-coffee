@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { GridOptions } from 'ag-grid-community';
+import { TableIconsCellComponent } from '../elements/table-icons-cell/table-icons-cell.component';
 
 @Injectable({
   providedIn: 'root'
@@ -61,13 +62,37 @@ export class TablesSettingsService {
         field: 'processing',
         sortable: true,
         flex: 1,
-        minWidth: 130, },
+        minWidth: 110,
+        cellRendererFramework: TableIconsCellComponent,
+        cellRendererParams: {
+          buttons: [
+            {
+              handler: null,
+              icon: 'wb_sunny',
+              tooltip: 'Dry',
+              conditionValue: 2,
+              conditionParam: 'processing_id'
+            }, {
+              handler: null,
+              icon: 'waves',
+              tooltip: 'Wet',
+              conditionValue: 1,
+              conditionParam: 'processing_id'
+            }]
+        }},
       {
         headerName: 'Taste',
         field: 'taste',
         sortable: true,
         flex: 1,
-        minWidth: 100, },
+        minWidth: 250,
+        valueFormatter: (params) => {
+          if (params.value) {
+            return `Sweet: ${params.value.sweet}%  Acid: ${params.value.acid}%
+              Bitter: ${params.value.bitter}%`;
+          }
+          return 'N/A';
+      }},
     ],
     rowSelection: 'single',
     suppressRowClickSelection: true,

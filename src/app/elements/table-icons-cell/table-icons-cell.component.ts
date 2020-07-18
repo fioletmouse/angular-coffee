@@ -6,6 +6,8 @@ interface CellParam {
   handler: (id: number) => void;
   icon: string;
   tooltip: string;
+  conditionValue: number;
+  conditionParam: string;
 }
 
 export interface IconCellParams extends ICellRendererParams {
@@ -25,6 +27,12 @@ export class TableIconsCellComponent implements ICellRendererAngularComp {
   agInit(params: IconCellParams): void {
     this.buttons = params.buttons;
     this.id = params.data.id;
+    this.buttons = this.buttons.filter( btn => {
+      if (btn.conditionParam) {
+       return params.data[btn.conditionParam] === btn.conditionValue;
+      }
+      return true;
+    });
   }
 
   onClick(e: Event, handler) {
