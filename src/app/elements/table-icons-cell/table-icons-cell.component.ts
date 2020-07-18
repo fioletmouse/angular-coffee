@@ -5,6 +5,7 @@ import { ICellRendererParams } from 'ag-grid-community';
 interface CellParam {
   handler: (id: number) => void;
   icon: string;
+  tooltip: string;
 }
 
 export interface IconCellParams extends ICellRendererParams {

@@ -1,5 +1,5 @@
 <div class="container">
-	<a *ngFor="let btn of buttons"
+	<a *ngFor="let btn of buttons" data-toggle="tooltip" title="{{btn.tooltip}}"
 	    role="button" class="btn" (click)="onClick($event, btn.handler)">
         <mat-icon aria-hidden="false">{{btn.icon}}</mat-icon>
 	</a>

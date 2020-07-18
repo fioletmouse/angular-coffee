@@ -46,11 +46,13 @@ export class ListComponent implements OnInit {
                 this.gotoDetails(id);
               },
               icon: 'preview',
+              tooltip: 'View'
             }, {
               handler:  (id: number) => {
                 this.gotoDetails(id, true);
               },
               icon: 'create',
+              tooltip: 'Edit'
             }]
         }
       };
