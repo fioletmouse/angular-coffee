@@ -1,0 +1,16 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$coffee-app-primary: mat-palette($mat-deep-orange, 900);
+$coffee-app-secondary: mat-palette($mat-brown, 300);
+$coffee-app-warn:    mat-palette($mat-red);
+
+$coffee-app-theme: mat-dark-theme((
+  color: (
+    primary: $coffee-app-primary,
+    accent: $coffee-app-secondary,
+    warn: $coffee-app-warn,  
+  )
+));
+
+@include angular-material-theme($coffee-app-theme);
