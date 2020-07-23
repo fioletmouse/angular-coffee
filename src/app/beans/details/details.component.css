@@ -1,0 +1,10 @@
+.decoration-border {
+    border-top: 4px double ivory;
+    border-bottom: 2px solid ivory;
+    padding: 5px;
+    text-align: center;
+
+}
+.decoration-border div:not(:last-child) {
+    border-right: 1px solid #c2185b;
+}

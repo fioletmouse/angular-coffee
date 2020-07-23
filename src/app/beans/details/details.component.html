@@ -2,22 +2,43 @@
 <div class="row">
     <div class="col-12">
         <el-card [title]="getFullName">    
-            <div class="row">
-                <div class="col-4">{{details.type}}</div>
-                <div class="col-4">{{details.region}}<br/>{{details.area}}</div>
-                <div class="col-4">
+            <div class="row decoration-border">
+                <div class="col-2">
+                    <h6>Разновидность</h6>
+                    {{details.type}}
+                </div>
+                <div class="col-3">
+                    <h6>Регион</h6>
+                    {{details.region}}
+                </div>
+                <div class="col-3">
+                    <h6>Район</h6>
+                    {{details.area}}
+                </div>
+                <div class="col-2">
+                    <h6>Высота</h6>
                     {{details.minAltitude}} 
                     {{details.maxAltitude != null ? ' - ' + details.maxAltitude : '' }}
                 </div>
+                <div class="col-2">
+                    <h6>Обработка</h6>
+                    {{details.processing}} 
+                </div>
             </div>
-            <div class="row">
-                <div class="col-3">{{details.brew}}</div>
-                <div class="col-3">{{details.processing}}</div>
-                <div class="col-3">{{details.taste}}</div>
-                <div class="col-3">{{details.roastDate}}</div>
-            </div>
-            <div class="row">
-                <div class="col-12">{{details.description}}</div>                
+            <div class="row mt-3">
+                <div class="col-8">{{details.description}}</div>             
+                <div class="col-4">
+                    <div class="row">
+                        <div class="col-12">{{details.brew}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            Acid: {{details.taste.acid}}
+                            Bitter: {{details.taste.bitter}}
+                            Sweet: {{details.taste.sweet}}
+                        </div>
+                    </div>                   
+                </div>                
             </div>
         </el-card>       
     </div>
