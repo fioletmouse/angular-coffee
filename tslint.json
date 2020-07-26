@@ -25,7 +25,7 @@
     "component-selector": [
       true,
       "element",
-      "app",
+      ["app", "el"],
       "kebab-case"
     ],
     "eofline": true,
@@ -96,7 +96,7 @@
     },
     "typedef": [
       true,
-      "call-signature"
+      "property-declaration"
     ],
     "typedef-whitespace": {
       "options": [

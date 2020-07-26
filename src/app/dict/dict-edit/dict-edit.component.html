@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-12">
+        <form class="col-12" [formGroup]="addEditForm" (submit)="onSave()">
+            <el-input [label]="'Name'" [control]="dictName" 
+                [required]="true"  [tabIndex]="1"></el-input>
+            <el-checkbox [label]="'Is Active'" [control]="dictIsActive" 
+                 [tabIndex]="2"></el-checkbox>
+            <div>
+                <el-button [text]="'Save'" [tabIndex]="3" (action)="onSave()"></el-button>
+                <el-button class="ml-md-2" [text]="'Cancel'" [tabIndex]="4" [color]="'accent'" 
+                    (action)="onCancel()"></el-button>
+
+            </div>
+           
+        </form>
+       
+    </div>
+   
+</div>
+

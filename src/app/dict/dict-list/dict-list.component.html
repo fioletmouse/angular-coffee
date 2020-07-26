@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-12">
+        <el-card [title]="title" [addAction]="true" (addHandler)="addClick()">
+            <el-main-table [data$]="data$" [gripOptions]="gridOptions" 
+            [clickedRow$]="chosenRow$">
+
+                <div slidePanel *ngIf="(chosenRow$ | async) != null">
+                    <app-dict-edit [clickedRow$]="chosenRow$" (save)="onSave($event)"
+                        (cancel)="onCancel($event)"></app-dict-edit>
+                </div>        
+            </el-main-table>
+        </el-card>       
+    </div>
+</div>
+

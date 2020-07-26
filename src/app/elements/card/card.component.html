@@ -1,0 +1,11 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>{{title}}
+            <el-button-icon *ngIf="addAction" (buttonHandler)="add()" 
+                [type]="'library_add'"></el-button-icon>
+        </mat-card-title>
+      </mat-card-header>
+    <mat-card-content>
+        <ng-content></ng-content>
+    </mat-card-content>
+</mat-card>

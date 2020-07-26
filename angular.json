@@ -25,6 +25,9 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/app/theme.scss",
+              "./node_modules/ag-grid-community/dist/styles/ag-grid.css",
+              "./node_modules/ag-grid-community/dist/styles/ag-theme-alpine-dark.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -90,6 +93,9 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/app/theme.scss",
+              "./node_modules/ag-grid-community/dist/styles/ag-grid.css",
+              "./node_modules/ag-grid-community/dist/styles/ag-theme-alpine-dark.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -121,6 +127,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "beans"
 }

@@ -1,0 +1,9 @@
+<ag-grid-angular #agGrid id="agGrid" class="ag-theme-alpine-dark"
+    [ngClass]="{'not-selected': !smallSize, 'selected': smallSize}"
+    [gridOptions]="gripOptions" [defaultColDef]="defaultColumnDef"
+    (gridReady)="onGridReady($event)">
+</ag-grid-angular>
+
+<div class="tableRowDrawer" *ngIf="smallSize">
+    <ng-content select="[slidePanel]"></ng-content>
+</div>
